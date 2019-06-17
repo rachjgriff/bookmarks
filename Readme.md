@@ -1,6 +1,8 @@
 # README: BOOKMARK MANAGER
 ----------
-* Makers Acadamey Wk 4 Weekly Challenge
+* Makers Academy Wk 4 Weekly Challenge
+* https://github.com/makersacademy/course/blob/master/bookmark_manager/00_challenge_map.md
+* The commits on master branch roughly correspond with the walkthroughs provided in the challenge
 
 ## BRIEF
 ----------
@@ -32,4 +34,6 @@ As a URL Hoarder
 So that I can see all the URLs I hoard in an organised way
 I’d like to see a list of bookmarks
 
-DOMAIN MODEL: https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png
+Domain Model: https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png
+
+Requirements: Controller, Bookmark class, bookmark view
