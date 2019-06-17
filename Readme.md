@@ -29,11 +29,7 @@
 #### USER STORY 1: List of bookmarks
 ---------
 As a URL Hoarder
-So that I can save all the URLs I hoard in an organised way
-I’d like to create a list of bookmarks
+So that I can see all the URLs I hoard in an organised way
+I’d like to see a list of bookmarks
 
-OBJECT | MESSAGES
------- | ------
-Hoarder |
-URL | Save
-Bookmark | List
+DOMAIN MODEL: https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png
