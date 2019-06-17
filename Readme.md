@@ -32,8 +32,8 @@ As a URL Hoarder
 So that I can save all the URLs I hoard in an organised way
 I’d like to create a list of bookmarks
 
-OBJECT		  |	MODEL
-—————————---| —————————-
-Hoarder	   	|
-URL		     	|	Save
-Bookmark  	|	List
+OBJECT | MODEL
+------ | ------
+Hoarder |
+URL | Save
+Bookmark | List
