@@ -27,7 +27,7 @@ rackup
 ```
 rspec
 ```
-* URL: http://localhost:9292
+URL: http://localhost:9292
 
 
 ## DATABASE: bookmark_manager
@@ -64,8 +64,8 @@ CREATE DATABASE bookmark_manager;
 ---------
 #### USER STORY 1: List of bookmarks
 ---------
-As a URL Hoarder
-So that I can see all the URLs I hoard in an organised way
+As a URL Hoarder  
+So that I can see all the URLs I hoard in an organised way  
 I’d like to see a list of bookmarks
 
 Domain Model: https://github.com/makersacademy/course/blob/master/bookmark_manager/images/bookmark_manager_1.png
@@ -82,6 +82,6 @@ MVC Model:
 
 #### USER STORY 2: Add new bookmarks
 ---------
-As a time-pressed user
-So that I can save a website
+As a time-pressed user  
+So that I can save a website  
 I would like to add the site's address and title to bookmark manager
