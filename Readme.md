@@ -15,6 +15,40 @@
 * Databases
 * Tooling
 
+## APP
+---------
+### SET UP INSTRUCTIONS
+---------
+```
+rackup
+```
+## TESTING
+--------
+```
+rspec
+```
+* URL: http://localhost:9292
+
+
+## DATABASE: bookmark_manager
+---------
+### SET UP INSTRUCTIONS
+---------
+* Connect to psql
+* Create the database using the psql command:
+
+```
+CREATE DATABASE bookmark_manager;
+```
+
+* Connect to the database using the pqsl command:
+
+```
+ \c bookmark_manager;
+ ```
+
+* Run the query we have saved in the file 01_create_bookmarks_table.sql
+
 ## WEBSITE SPECIFICATION (REQUIREMENTS)
 ----------
 * Show a list of bookmarks
@@ -45,3 +79,9 @@ MVC Model:
 | Model       | Encapsulate logic with relevant data          | Encapsulate bookmark data in a class    |
 | View        | Display the result to a user                  | Show the bookmark data in a list        |
 | Controller  | Get data from the model and put in the view   | Render bookmark data into to the view   |
+
+#### USER STORY 2: Add new bookmarks
+---------
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to bookmark manager
