@@ -14,7 +14,8 @@ class BookmarkManager < Sinatra::Base
 
   post '/confirmation' do
     @new_bookmark = params[:Bookmark]
-    Bookmark.create(@new_bookmark)
+    @new_title = params[:Title]
+    Bookmark.create(@new_title, @new_bookmark)
     redirect '/bookmarks'
   end
 
