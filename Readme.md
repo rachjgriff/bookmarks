@@ -17,18 +17,18 @@
 
 ## APP
 ---------
-### SET UP INSTRUCTIONS
+#### SET UP INSTRUCTIONS
 ---------
 ```
 rackup
 ```
+URL: http://localhost:9292/bookmarks
+
 ## TESTING
 --------
 ```
 rspec
 ```
-URL: http://localhost:9292
-
 
 ## DATABASE: bookmark_manager
 ---------
@@ -87,3 +87,8 @@ MVC Model:
 As a time-pressed user  
 So that I can save a website  
 I would like to add the site's address and title to bookmark manager
+#### USER STORY 3: Delete bookmarks
+---------
+As a user
+So I can remove my bookmark from Bookmark Manager
+I want to delete a bookmark
