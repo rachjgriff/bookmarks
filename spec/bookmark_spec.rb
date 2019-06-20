@@ -2,7 +2,7 @@ require 'bookmark'
 
 describe Bookmark do
   describe '.all' do
-    it 'returns a list of bookmarks' do
+    it 'Returns a list of bookmarks' do
       conncetion = PG.connect(dbname: 'bookmark_manager_test')
 
       bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers")
@@ -20,14 +20,14 @@ describe Bookmark do
   end
 
   describe '.create' do
-    it ' creates a new bookmark' do
-      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+    it ' Creates a new bookmark' do
+      bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers')
       persisted_data = PG.connect(dbname: 'bookmark_manager_test').query("SELECT * FROM bookmarks WHERE id = #{bookmark.id};")
 
       expect(bookmark).to be_a Bookmark
       expect(bookmark.id).to eq persisted_data.first['id']
-      expect(bookmark.url).to eq 'http://www.testbookmark.com'
-      expect(bookmark.title).to eq 'Test Bookmark'
+      expect(bookmark.url).to eq 'http://www.makersacademy.com'
+      expect(bookmark.title).to eq 'Makers'
     end
   end
 end
