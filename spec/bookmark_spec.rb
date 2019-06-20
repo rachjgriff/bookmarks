@@ -3,7 +3,7 @@ require 'bookmark'
 describe Bookmark do
   describe '.all' do
     it 'Returns a list of bookmarks' do
-      conncetion = PG.connect(dbname: 'bookmark_manager_test')
+      connection = PG.connect(dbname: 'bookmark_manager_test')
 
       bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers")
       Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Software")
