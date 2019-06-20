@@ -36,8 +36,26 @@ describe Bookmark do
       bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers')
       Bookmark.delete(id: bookmark.id)
       bookmarks = Bookmark.all
-      
+
       expect(bookmarks.length).to eq 0
+    end
+  end
+
+  describe '.find' do
+    it 'retrieves a bookmark from the database' do
+      bookmark_in = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers')
+      bookmark = Bookmark.find(id: bookmark_in.id)
+      expect(bookmark.id).to eq bookmark_in.id
+    end
+  end
+
+  describe '.update' do
+    it 'updates existing bookmark' do
+      bookmark_in = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers')
+      bookmark = Bookmark.find(id: bookmark_in.id)
+      Bookmark.update(id: bookmark.id, url: 'http://www.google.com', title: 'Google')
+      bookmark = Bookmark.find(id: bookmark_in.id)
+      expect(bookmark.title).to eq 'Google'
     end
   end
 end
