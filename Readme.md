@@ -35,19 +35,21 @@ URL: http://localhost:9292
 ### SET UP INSTRUCTIONS
 ---------
 * Connect to psql
-* Create the database using the psql command:
+* Create the database and the testing database using the psql commands:
 
 ```
 CREATE DATABASE bookmark_manager;
+CREATE DATABASE bookmark_manager_test;
 ```
 
 * Connect to the database using the pqsl command:
 
 ```
  \c bookmark_manager;
+ \c bookmark_manager_test;
  ```
 
-* Run the query we have saved in the file 01_create_bookmarks_table.sql
+* To set up the appropriate tables, connect to each database in 'psql' and run the SQL scripts in the 'db/migration' folder in the given order.
 
 ## WEBSITE SPECIFICATION (REQUIREMENTS)
 ----------

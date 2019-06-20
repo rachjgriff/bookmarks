@@ -1,16 +1,15 @@
 feature 'Viewing bookmarks' do
-  scenario 'Visiting the bookmark page' do
+  scenario 'A user can see bookmarks' do
 
-    Bookmark.create("Makers", "http://www.makersacademy.com")
-    Bookmark.create("Software", "http://www.destroyallsoftware.com")
-    Bookmark.create("Google", "http://www.google.com")
+    Bookmark.create(url: "http://www.makersacademy.com", title: "Makers")
+    Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Software")
+    Bookmark.create(url: "http://www.google.com", title: "Google")
 
+    # Missing Bookmark.all???
     visit('/bookmarks')
 
-    bookmarks = Bookmark.all
-
-    expect(page).to have_content("Makers")
-    expect(page).to have_content("Software")
-    expect(page).to have_content("Google")
+    expect(page).to have_link("Makers", href: "http://www.makersacademy.com")
+    expect(page).to have_link("Software", href: "http://www.destroyallsoftware.com")
+    expect(page).to have_link("Google", href: "http://www.google.com")
   end
 end
