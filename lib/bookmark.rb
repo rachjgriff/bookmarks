@@ -1,5 +1,5 @@
 require 'pg'
-require 'database_connection'
+require_relative 'database_connection'
 
 class Bookmark
 
@@ -9,6 +9,10 @@ class Bookmark
     @id = id
     @title = title
     @url = url
+  end
+
+  def comments(comment = Comment)
+    comment.where(bookmark_id: @id)
   end
 
   def self.all

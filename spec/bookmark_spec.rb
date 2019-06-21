@@ -1,6 +1,8 @@
 require 'bookmark'
 
 describe Bookmark do
+  let(:comment_class) {double(:commemt_class) }
+
   describe '.all' do
     it 'Returns a list of bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
@@ -56,6 +58,17 @@ describe Bookmark do
       Bookmark.update(id: bookmark.id, url: 'http://www.google.com', title: 'Google')
       bookmark = Bookmark.find(id: bookmark_in.id)
       expect(bookmark.title).to eq 'Google'
+    end
+  end
+
+  describe '#comments' do
+    it 'retrieves all comments for specfic bookmark' do
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers")
+      # DatabaseConnection.query("INSERT INTO comments (id, text, bookmark_id) VALUES(1, 'test comment', #{bookmark.id});")
+      # comment = bookmark.comments.first
+      expect(comment_class).to receive(:where).with(bookmark_id: bookmark.id)
+
+      bookmark.comments(comment_class)
     end
   end
 end
